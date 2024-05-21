@@ -24,14 +24,11 @@ void Config::Init() {
         DEBUG_FUNCTION_LINE("Failed to open storage %s (%d)", WUPS_GetStorageStatusStr(storageRes), storageRes);
     }
     else {
-        // Try to get value from storage
         if ((storageRes = WUPS_GetBool(nullptr, "connect_to_network", &connect_to_network)) == WUPS_STORAGE_ERROR_NOT_FOUND) {
             bool skipPatches = false;
             if ((storageRes = WUPS_GetBool(nullptr, "skipPatches", &skipPatches)) != WUPS_STORAGE_ERROR_NOT_FOUND) {
-                // Migrate old config value
                 connect_to_network = !skipPatches;
             }
-            // Add the value to the storage if it's missing.
             if (WUPS_StoreBool(nullptr, "connect_to_network", connect_to_network) != WUPS_STORAGE_ERROR_SUCCESS) {
                 DEBUG_FUNCTION_LINE("Failed to store bool");
             }
@@ -39,8 +36,6 @@ void Config::Init() {
         else if (storageRes != WUPS_STORAGE_ERROR_SUCCESS) {
             DEBUG_FUNCTION_LINE("Failed to get bool %s (%d)", WUPS_GetStorageStatusStr(storageRes), storageRes);
         }
-
-        // Close storage
         if (WUPS_CloseStorage() != WUPS_STORAGE_ERROR_SUCCESS) {
             DEBUG_FUNCTION_LINE("Failed to close storage");
         }
@@ -141,13 +136,10 @@ WUPS_GET_CONFIG() {
 }
 
 WUPS_CONFIG_CLOSED() {
-    // Save all changes
     if (WUPS_CloseStorage() != WUPS_STORAGE_ERROR_SUCCESS) {
         DEBUG_FUNCTION_LINE("Failed to close storage");
     }
-
     if (Config::need_relaunch) {
-        // Need to reload the console so the patches reset
         OSForceFullRelaunch();
         SYSLaunchMenu();
         Config::need_relaunch = false;
