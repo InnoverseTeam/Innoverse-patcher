@@ -10,7 +10,6 @@ static std::unique_ptr<std::thread> sShowHintThread;
 static bool sShutdownHintThread = false;
 
 void ShowNotification(const char * notification) {
-    // Wait for notification module to be ready
     bool isOverlayReady = false;
     while (!sShutdownHintThread && NotificationModule_IsOverlayReady(&isOverlayReady) == NOTIFICATION_MODULE_RESULT_SUCCESS && !isOverlayReady)
         OSSleepTicks(OSMillisecondsToTicks(16));
