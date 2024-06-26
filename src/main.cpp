@@ -29,13 +29,13 @@
 
 #include <gx2/surface.h>
 
-WUPS_PLUGIN_NAME("Innoverse");
+WUPS_PLUGIN_NAME("Innoverse-Patcher");
 WUPS_PLUGIN_DESCRIPTION("Innoverse Patcher");
-WUPS_PLUGIN_VERSION("v1.1");
-WUPS_PLUGIN_AUTHOR("Innoverse-patcher made by cedkeChat");
+WUPS_PLUGIN_VERSION("v1.0");
+WUPS_PLUGIN_AUTHOR("Innoverse-patcher made by cedkeChat01");
 WUPS_PLUGIN_LICENSE("ISC");
 
-WUPS_USE_STORAGE("Innoverse-patcher");
+WUPS_USE_STORAGE("innoverse-patcher");
 WUPS_USE_WUT_DEVOPTAB();
 
 #include <kernel/kernel.h>
