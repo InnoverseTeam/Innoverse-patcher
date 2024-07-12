@@ -68,6 +68,38 @@ static bool is555(MCPSystemVersion version) {
     return (version.major == 5) && (version.minor == 5) && (version.patch >= 5);
 }
 
+static const char *get_nintendo_network_message() {
+    switch (get_system_language()) {
+        case nn::swkbd::LanguageType::English:
+        default:
+            return "Using Nintendo Network";
+        case nn::swkbd::LanguageType::Spanish:
+            return "Usando Nintendo Network";
+        case nn::swkbd::LanguageType::French:
+            return "Sur Nintendo Network";
+        case nn::swkbd::LanguageType::Italian:
+            return "Usando Nintendo Network";
+        case nn::swkbd::LanguageType::German:
+            return "Nutze Nintendo Network";
+    }
+}
+
+static const char *get_innoverse_message() {
+    switch (get_system_language()) {
+        case nn::swkbd::LanguageType::English:
+        default:
+            return "Using Innoverse";
+        case nn::swkbd::LanguageType::Spanish:
+            return "Usando Innoverse";
+        case nn::swkbd::LanguageType::French:
+            return "Utilise Innoverse";
+        case nn::swkbd::LanguageType::Italian:
+            return "Usando Innoverse";
+        case nn::swkbd::LanguageType::German:
+            return "Nutze Innoverse";
+    }
+}
+
 INITIALIZE_PLUGIN() {
     WHBLogUdpInit();
     WHBLogCafeInit();
@@ -110,11 +142,11 @@ INITIALIZE_PLUGIN() {
             write_string(patch.address, patch.url);
         }
         DEBUG_FUNCTION_LINE("Innoverse URL and NoSSL patches applied successfully.");
-        StartNotificationThread("Using Innoverse");
+        ShowNotification(get_innoverse_message());
     }
     else {
         DEBUG_FUNCTION_LINE("Innoverse URL and NoSSL patches skipped.");
-        StartNotificationThread("Not using Innoverse");
+        ShowNotification(get_nintendo_network_message());
     }
 
     MCP_Close(mcp);
