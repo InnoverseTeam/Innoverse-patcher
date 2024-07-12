@@ -19,7 +19,7 @@ WUMS_ROOT := $(DEVKITPRO)/wums
 # DATA is a list of directories containing data files
 # INCLUDES is a list of directories containing header files
 #-------------------------------------------------------------------------------
-TARGET		:=	Inkay-Innoverse
+TARGET		:=	Innoverse-patcher
 BUILD		:=	build
 SOURCES		:=	src src/patches src/utils src/ext/inih
 DATA		:=	data
