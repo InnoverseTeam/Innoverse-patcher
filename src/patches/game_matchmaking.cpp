@@ -40,10 +40,10 @@ static int handler(void *user, const char *section, const char *name, const char
 static void check_modpack() {
     modpack mod;
     if (ini_parse("fs:/vol/content/pretendo.ini", handler, &mod)) {
-        DEBUG_FUNCTION_LINE("Patches/MK8: Doesn't look like a modpack");
+        DEBUG_FUNCTION_LINE("Inkay/MK8: Doesn't look like a modpack");
     }
 
-    DEBUG_FUNCTION_LINE("Patches/MK8: Playing %s (%08x)", mod.name.c_str(), mod.dlc_id);
+    DEBUG_FUNCTION_LINE("Inkay/MK8: Playing %s (%08x)", mod.name.c_str(), mod.dlc_id);
     dlc_modpack = mod;
 }
 
@@ -54,7 +54,7 @@ DECL_FUNCTION(void, mk8_MatchmakeSessionSearchCriteria_SetAttribute, void *_this
 
         const int dlc_id = dlc_modpack->dlc_id;
         if (dlc_id != -1) {
-            DEBUG_FUNCTION_LINE("Patches/MK8: Searching for %s session (%08x)", dlc_modpack->name.c_str(), dlc_id);
+            DEBUG_FUNCTION_LINE("Inkay/MK8: Searching for %s session (%08x)", dlc_modpack->name.c_str(), dlc_id);
             attributeValue = dlc_id;
         }
     }
@@ -68,7 +68,7 @@ DECL_FUNCTION(void, mk8_MatchmakeSession_SetAttribute, void *_this, uint32_t att
 
         const int dlc_id = dlc_modpack->dlc_id;
         if (dlc_id != -1) {
-            DEBUG_FUNCTION_LINE("Patches/MK8: Creating %s session (%08x)", dlc_modpack->name.c_str(), dlc_id);
+            DEBUG_FUNCTION_LINE("Inkay/MK8: Creating %s session (%08x)", dlc_modpack->name.c_str(), dlc_id);
             attributeValue = dlc_id;
         }
     }
@@ -86,7 +86,7 @@ void install_matchmaking_patches() {
     auto add_patch = [](function_replacement_data_t repl, const char *game, const char *name) {
         PatchedFunctionHandle handle = 0;
         if (FunctionPatcher_AddFunctionPatch(&repl, &handle, nullptr) != FUNCTION_PATCHER_RESULT_SUCCESS) {
-            DEBUG_FUNCTION_LINE("Patches/%s: Failed to patch %s!", game, name);
+            DEBUG_FUNCTION_LINE("Inkay/%s: Failed to patch %s!", game, name);
         }
         matchmaking_patches.push_back(handle);
     };
