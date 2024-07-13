@@ -1,8 +1,7 @@
 #ifndef _PATCHER_H
 #define _PATCHER_H
 
-typedef struct URL_Patch
-{
+typedef struct URL_Patch {
     unsigned int address;
     char url[80];
 } URL_Patch;
@@ -18,7 +17,7 @@ static const URL_Patch url_patches[] = {
         {0xE2282DB4, "https://ecs.wup.shop.nintendo.net/ecs/services/ECommerceSOAP"},
         {0xE22830A0, "https://ecs.wup.shop.nintendo.net/ecs/services/ECommerceSOAP"},
         {0xE22830E0, "https://nus.wup.shop.nintendo.net/nus/services/NetUpdateSOAP"},
-        {0xE2299990, "nppl.app.pretendo.cc"}, //pretendo URL
+        {0xE2299990, "nppl.nonamegiven.xyz"},
         {0xE229A600, "https://pls.wup.shop.nintendo.net/pls/upload"},
         {0xE229A6AC, "https://npvk-dev.app.nintendo.net/reports"},
         {0xE229A6D8, "https://npvk.app.nintendo.net/reports"},
