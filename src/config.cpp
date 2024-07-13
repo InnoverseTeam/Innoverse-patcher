@@ -1,4 +1,3 @@
-
 #include "config.h"
 
 #include "wut_extra.h"
