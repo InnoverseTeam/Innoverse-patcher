@@ -24,26 +24,26 @@ const char wave_new[] = {
 const unsigned char miiverse_green_highlight[] = {
         0x82, 0xff, 0x05, 0xff, 0x82, 0xff, 0x05, 0xff, 0x1d, 0xff, 0x04, 0xff, 0x1d, 0xff, 0x04, 0xff
 };
-const unsigned char juxt_purple_highlight[] = {
+const unsigned char inno_purple_highlight[] = {
         0x5d, 0x4a, 0x9a, 0xff, 0x5d, 0x4a, 0x9a, 0xff, 0x5d, 0x4a, 0x9a, 0xff, 0x5d, 0x4a, 0x9a, 0xff
 };
 const unsigned char miiverse_green_touch1[] = {
         0x94, 0xd9, 0x2a, 0x00, 0x57, 0xbd, 0x12, 0xff
 };
-const unsigned char juxt_purple_touch1[] = {
+const unsigned char inno_purple_touch1[] = {
         0x5d, 0x4a, 0x9a, 0x00, 0x5d, 0x4a, 0x9a, 0xff
 };
 const unsigned char miiverse_green_touch2[] = {
         0x57, 0xbd, 0x12, 0x00, 0x94, 0xd9, 0x2a, 0xff
 };
-const unsigned char juxt_purple_touch2[] = {
+const unsigned char inno_purple_touch2[] = {
         0x5d, 0x4a, 0x9a, 0x00, 0x5d, 0x4a, 0x9a, 0xff
 };
 
 const replacement replacements[] = {
-        {miiverse_green_highlight, juxt_purple_highlight},
-        {miiverse_green_touch1,    juxt_purple_touch1},
-        {miiverse_green_touch2,    juxt_purple_touch2},
+        {miiverse_green_highlight, inno_purple_highlight},
+        {miiverse_green_touch1,    inno_purple_touch1},
+        {miiverse_green_touch2,    inno_purple_touch2},
 };
 
 static std::optional<FSFileHandle> rootca_pem_handle{};
@@ -62,7 +62,7 @@ DECL_FUNCTION(int, FSOpenFile, FSClient *client, FSCmdBlock *block, char *path, 
         //we do it when loading this file since it should only load once, preventing massive lag spikes as it searches all of MEM2 xD
         //WHBLogUdpInit();
 
-        DEBUG_FUNCTION_LINE("Innoverse-patcher: hewwo!\n");
+        DEBUG_FUNCTION_LINE("Innoverse-patcher: hellooooo!\n");
 
         auto olv_ok = setup_olv_libs();
         // Patch applet binary too
