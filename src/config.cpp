@@ -51,7 +51,7 @@ constexpr config_strings get_config_strings(nn::swkbd::LanguageType language) {
                 .press_a_action = "Pulsa A",
                 .restart_to_apply_action = "Reinicia para confirmar",
                 .need_menu_action = "Sólo desde el menú de WiiU",
-                .restart_console = "",
+                .restart_console = "Parche de reinicio (en caso de problemas)",
             };
 
         case nn::swkbd::LanguageType::French:
@@ -76,7 +76,7 @@ constexpr config_strings get_config_strings(nn::swkbd::LanguageType language) {
                 .press_a_action = "Premi A",
                 .restart_to_apply_action = "Riavvia per applicare",
                 .need_menu_action = "Solo dal menu WiiU",
-                .restart_console = "",
+                .restart_console = "Patch di riavvio (in caso di problemi)",
             };
 
         case nn::swkbd::LanguageType::German:
@@ -89,7 +89,7 @@ constexpr config_strings get_config_strings(nn::swkbd::LanguageType language) {
                 .press_a_action = "Drücke A",
                 .restart_to_apply_action = "Neustarten zum Anwenden",
                 .need_menu_action = "Nur vom Wii U-Menü aus",
-                .restart_console = "",
+                .restart_console = "Neustart-Patch (bei Problemen)",
             };
     }
 }
