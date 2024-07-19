@@ -25,7 +25,7 @@ static const URL_Patch url_patches[] = {
         {0xE22830E0, "https://nus.wup.shop.nintendo.net/nus/services/NetUpdateSOAP"},
 
         //NPPL
-        {0xE2299990, "nppl-innoverse-app.alwaysdata.net"},
+        {0xE2299990, "nppl.innoverse.club"},
 
         //REPORTS
         {0xE229A600, "https://pls.wup.shop.nintendo.net/pls/upload"},
