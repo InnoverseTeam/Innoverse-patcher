@@ -44,7 +44,7 @@
 
 #include <gx2/surface.h>
 
-#define INNOVERSE_VERSION "v1.0.4"
+#define INNOVERSE_VERSION "v1.0.5"
 
 WUPS_PLUGIN_NAME("Innoverse-patcher");
 WUPS_PLUGIN_DESCRIPTION("Innoverse Miiverse Custom Patcher");
@@ -161,6 +161,10 @@ INITIALIZE_PLUGIN() {
         for (const auto &patch: url_patches) {
             write_string(patch.address, patch.url);
         }
+
+        // IOS-NIM-BOSS GlobalPolicyList->state: poking this forces a refresh after we changed the url
+        Mocha_IOSUKernelWrite32(0xE24B3D90, 4);
+        
         DEBUG_FUNCTION_LINE_VERBOSE("Innoverse URL and NoSSL patches applied successfully.");
 
         ShowNotification(get_pretendo_message());
