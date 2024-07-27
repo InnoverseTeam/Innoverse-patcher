@@ -44,13 +44,13 @@
 
 #include <gx2/surface.h>
 
-#define INNOVERSE_VERSION "v1.0.4"
+#define INNOVERSE_VERSION "v1.0.5"
 
 WUPS_PLUGIN_NAME("Innoverse-patcher");
 WUPS_PLUGIN_DESCRIPTION("Innoverse Miiverse Custom Patcher");
 WUPS_PLUGIN_VERSION(INNOVERSE_VERSION);
 WUPS_PLUGIN_AUTHOR("InnoverseTeam");
-WUPS_PLUGIN_LICENSE("ISC");
+WUPS_PLUGIN_LICENSE("GPLv3");
 
 WUPS_USE_STORAGE("innoverse");
 
