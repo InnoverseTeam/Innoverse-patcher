@@ -197,6 +197,7 @@ ON_APPLICATION_START() {
 
     setup_olv_libs();
     matchmaking_notify_titleswitch();
+    patchAccountSettings();
 }
 
 ON_APPLICATION_ENDS() {
