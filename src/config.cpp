@@ -1,6 +1,20 @@
-//
-// Created by ash.
-//
+/*  Copyright 2022 Pretendo Network contributors <pretendo.network>
+    Copyright 2022 Ash Logan <ash@heyquark.com>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
 #include "config.h"
 
 #include "wut_extra.h"
@@ -37,8 +51,7 @@ constexpr config_strings get_config_strings(nn::swkbd::LanguageType language) {
                 .reset_wwp_setting = "Reset Wara Wara Plaza",
                 .press_a_action = "Press A",
                 .restart_to_apply_action = "Restart to apply",
-                .need_menu_action = "From WiiU menu only",
-                .restart_console = "Restart the patches (When you have a problem)",
+                .need_menu_action = "From WiiU menu only"
             };
 
         case nn::swkbd::LanguageType::Spanish:
@@ -51,7 +64,6 @@ constexpr config_strings get_config_strings(nn::swkbd::LanguageType language) {
                 .press_a_action = "Pulsa A",
                 .restart_to_apply_action = "Reinicia para confirmar",
                 .need_menu_action = "Sólo desde el menú de WiiU",
-                .restart_console = "Parche de reinicio (en caso de problemas)",
             };
 
         case nn::swkbd::LanguageType::French:
@@ -60,12 +72,12 @@ constexpr config_strings get_config_strings(nn::swkbd::LanguageType language) {
                 .network_category = "Sélection du réseau",
                 .connect_to_network_setting = "Connexion à Innoverse",
                 .other_category = "Autres paramètres",
-                .reset_wwp_setting = "Réinitialiser la Wara Wara Plaza",
+                .reset_wwp_setting = "Réinitialiser la place WaraWara",
                 .press_a_action = "Appuyez sur A",
                 .restart_to_apply_action = "Redémarrer pour appliquer",
                 .need_menu_action = "Depuis le menu Wii U seulement",
-                .restart_console = "Redémarrer les patches (Si vous avez un problème)",
             };
+
         case nn::swkbd::LanguageType::Italian:
             return {
                 .plugin_name = "Innoverse-patcher",
@@ -76,7 +88,6 @@ constexpr config_strings get_config_strings(nn::swkbd::LanguageType language) {
                 .press_a_action = "Premi A",
                 .restart_to_apply_action = "Riavvia per applicare",
                 .need_menu_action = "Solo dal menu WiiU",
-                .restart_console = "Patch di riavvio (in caso di problemi)",
             };
 
         case nn::swkbd::LanguageType::German:
@@ -89,7 +100,78 @@ constexpr config_strings get_config_strings(nn::swkbd::LanguageType language) {
                 .press_a_action = "Drücke A",
                 .restart_to_apply_action = "Neustarten zum Anwenden",
                 .need_menu_action = "Nur vom Wii U-Menü aus",
-                .restart_console = "Neustart-Patch (bei Problemen)",
+            };
+
+        case nn::swkbd::LanguageType::SimplifiedChinese:
+            return {
+                .plugin_name = "Innoverse-patcher",
+                .network_category = "选择网络",
+                .connect_to_network_setting = "连接到Innoverse",
+                .other_category = "其他设置",
+                .reset_wwp_setting = "重置Wara Wara Plaza",
+                .press_a_action = "请按 A",
+                .restart_to_apply_action = "重启以应用设置",
+                .need_menu_action = "仅来自WiiU Menu"
+            };
+
+        case nn::swkbd::LanguageType::TraditionalChinese:
+            return {
+                .plugin_name = "Innoverse-patcher",
+                .network_category = "選擇網路",
+                .connect_to_network_setting = "連接到Innoverse",
+                .other_category = "其他設定",
+                .reset_wwp_setting = "重置Wara Wara Plaza",
+                .press_a_action = "請按 A",
+                .restart_to_apply_action = "重啓以套用設定",
+                .need_menu_action = "僅來自WiiU Menu"
+            };
+
+        case nn::swkbd::LanguageType::Portuguese:
+            return {
+                    .plugin_name = "Innoverse-patcher",
+                    .network_category = "Selecionar rede",
+                    .connect_to_network_setting = "Conecta-se à Innoverse",
+                    .other_category = "Outras configurações",
+                    .reset_wwp_setting = "Resetar Wara Wara Plaza",
+                    .press_a_action = "Aperte A",
+                    .restart_to_apply_action = "Reinicie para aplicar",
+                    .need_menu_action = "Apenas no menu do Wii U"
+            };
+
+        case nn::swkbd::LanguageType::Japanese:
+            return {
+                    .plugin_name = "Innoverse-patcher",
+                    .network_category = "ネットワークの選択",
+                    .connect_to_network_setting = "Innoverse ネットワークに接続する",
+                    .other_category = "その他の設定",
+                    .reset_wwp_setting = "わらわら広場をリセット",
+                    .press_a_action = "Aボタンを押す",
+                    .restart_to_apply_action = "再起動して適用",
+                    .need_menu_action = "WiiUメニューからのみ実行可能"
+            };
+
+        case nn::swkbd::LanguageType::Dutch:
+            return {
+                    .plugin_name = "Innoverse-patcher",
+                    .network_category = "Netwerkselectie",
+                    .connect_to_network_setting = "Verbind met het Innoverse",
+                    .other_category = "Overige instellingen",
+                    .reset_wwp_setting = "Reset het Wara Wara Plaza",
+                    .press_a_action = "Druk A",
+                    .restart_to_apply_action = "Herstart om toe te passen",
+                    .need_menu_action = "Alleen vanuit het WiiU-menu"
+            };
+
+        case nn::swkbd::LanguageType::Russian:
+            return {
+                    .plugin_name = "Innoverse-patcher",
+                    .network_category = "Выбор сети",
+                    .connect_to_network_setting = "Подключиться к Innoverse",
+                    .other_category = "Другие настройки",
+                    .reset_wwp_setting = "Сбросить Wara Wara Plaza",
+                    .press_a_action = "Нажмите A",
+                    .restart_to_apply_action = "Перезагрузите для применения изменений",
+                    .need_menu_action = "Только из меню Wii U"
             };
     }
 }
@@ -217,7 +299,7 @@ static void ConfigMenuClosedCallback() {
 
 void Config::Init() {
     // Init the config api
-    WUPSConfigAPIOptionsV1 configOptions = { .name = "Innoverse-patcher" };
+    WUPSConfigAPIOptionsV1 configOptions = { .name = "Inkay" };
     if (WUPSConfigAPI_Init(configOptions, ConfigMenuOpenedCallback, ConfigMenuClosedCallback) != WUPSCONFIG_API_RESULT_SUCCESS) {
         DEBUG_FUNCTION_LINE("Failed to initialize WUPS Config API");
         return;
