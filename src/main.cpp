@@ -93,29 +93,47 @@ static const char *get_nintendo_network_message() {
         default:
             return "Using Miiverse";
         case nn::swkbd::LanguageType::Spanish:
-            return "Usando Miiverse";
-        case nn::swkbd::LanguageType::French:
-            return "Utilise Miiverse";
+        case nn::swkbd::LanguageType::Portuguese:
         case nn::swkbd::LanguageType::Italian:
             return "Usando Miiverse";
+        case nn::swkbd::LanguageType::French:
+            return "Sur Miiverse";
         case nn::swkbd::LanguageType::German:
             return "Nutze Miiverse";
+        case nn::swkbd::LanguageType::SimplifiedChinese:
+        case nn::swkbd::LanguageType::TraditionalChinese:
+            return "使用 Miiverse";
+        case nn::swkbd::LanguageType::Japanese:
+            return "ニンテンドーネットワークを使用中";
+        case nn::swkbd::LanguageType::Dutch:
+            return "Miiverse wordt gebruikt";
+        case nn::swkbd::LanguageType::Russian:
+            return "Используется Miiverse";
     }
 }
 
-static const char *get_pretendo_message() {
+static const char *get_innoverse_message() {
     switch (get_system_language()) {
         case nn::swkbd::LanguageType::English:
         default:
             return "Using Innoverse";
         case nn::swkbd::LanguageType::Spanish:
-            return "Usando Innoverse";
-        case nn::swkbd::LanguageType::French:
-            return "Utilise Innoverse";
+        case nn::swkbd::LanguageType::Portuguese:
         case nn::swkbd::LanguageType::Italian:
             return "Usando Innoverse";
+        case nn::swkbd::LanguageType::French:
+            return "Sur Innoverse";
         case nn::swkbd::LanguageType::German:
             return "Nutze Innoverse";
+        case nn::swkbd::LanguageType::SimplifiedChinese:
+        case nn::swkbd::LanguageType::TraditionalChinese:
+            return "使用 Innoverse";
+        case nn::swkbd::LanguageType::Japanese:
+            return "Innoverseの使用例";
+        case nn::swkbd::LanguageType::Dutch:
+            return "Innoverse wordt gebruikt";
+        case nn::swkbd::LanguageType::Russian:
+            return "Используется Innoverse";
     }
 }
 
@@ -167,7 +185,7 @@ INITIALIZE_PLUGIN() {
         
         DEBUG_FUNCTION_LINE_VERBOSE("Innoverse URL and NoSSL patches applied successfully.");
 
-        ShowNotification(get_pretendo_message());
+        ShowNotification(get_innoverse_message());
     } else {
         DEBUG_FUNCTION_LINE_VERBOSE("Innoverse URL and NoSSL patches skipped.");
 
