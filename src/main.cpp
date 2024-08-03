@@ -95,7 +95,7 @@ static const char *get_nintendo_network_message() {
         case nn::swkbd::LanguageType::Spanish:
             return "Usando Miiverse";
         case nn::swkbd::LanguageType::French:
-            return "Sur Miiverse";
+            return "Utilise Miiverse";
         case nn::swkbd::LanguageType::Italian:
             return "Usando Miiverse";
         case nn::swkbd::LanguageType::German:
@@ -111,7 +111,7 @@ static const char *get_pretendo_message() {
         case nn::swkbd::LanguageType::Spanish:
             return "Usando Innoverse";
         case nn::swkbd::LanguageType::French:
-            return "Sur Innoverse";
+            return "Utilise Innoverse";
         case nn::swkbd::LanguageType::Italian:
             return "Usando Innoverse";
         case nn::swkbd::LanguageType::German:
