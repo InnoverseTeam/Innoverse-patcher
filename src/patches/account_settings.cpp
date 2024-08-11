@@ -107,7 +107,7 @@ bool isAccountSettingsTitle() {
         OSGetTitleID() == ACCOUNT_SETTINGS_TID_J ||
         OSGetTitleID() == ACCOUNT_SETTINGS_TID_U ||
         OSGetTitleID() == ACCOUNT_SETTINGS_TID_E
-        ));
+    ));
 }
 
 bool patchAccountSettings() {
