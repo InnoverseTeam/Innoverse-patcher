@@ -32,6 +32,7 @@
 #include "Notification.h"
 #include "patches/olv_urls.h"
 #include "patches/game_matchmaking.h"
+#include "patches/account_settings.h"
 
 #include <coreinit/filesystem.h>
 #include <cstring>
@@ -219,5 +220,5 @@ ON_APPLICATION_START() {
 }
 
 ON_APPLICATION_ENDS() {
-
+    DEBUG_FUNCTION_LINE_VERBOSE("Innoverse " INNOVERSE_VERSION " shuting down...\n");
 }

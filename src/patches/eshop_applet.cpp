@@ -30,7 +30,7 @@
 #include "ca_pem.h" // generated at buildtime
 
 const char wave_original[] = "https://ninja.wup.shop.nintendo.net/ninja/wood_index.html?";
-const char wave_new[] =      "http://geteshop.innoverse.club/ninja/wood_index.html?";
+const char wave_new[] =      "https://geteshop.innoverse.club/ninja/wood_index.html?";
 
 const char whitelist_original[] = {
         0x68, 0x74, 0x74, 0x70, 0x73, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

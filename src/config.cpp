@@ -299,7 +299,7 @@ static void ConfigMenuClosedCallback() {
 
 void Config::Init() {
     // Init the config api
-    WUPSConfigAPIOptionsV1 configOptions = { .name = "Inkay" };
+    WUPSConfigAPIOptionsV1 configOptions = { .name = "Innoverse-Patcher" };
     if (WUPSConfigAPI_Init(configOptions, ConfigMenuOpenedCallback, ConfigMenuClosedCallback) != WUPSCONFIG_API_RESULT_SUCCESS) {
         DEBUG_FUNCTION_LINE("Failed to initialize WUPS Config API");
         return;
