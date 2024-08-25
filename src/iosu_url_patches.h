@@ -18,7 +18,7 @@ static const URL_Patch url_patches[] = {
         {0xE2282DB4, "https://ecs.wup.shop.pretendo.cc/ecs/services/ECommerceSOAP"},
         {0xE22830A0, "https://ecs.wup.shop.pretendo.cc/ecs/services/ECommerceSOAP"},
         {0xE22830E0, "https://nus.wup.shop.pretendo.cc/nus/services/NetUpdateSOAP"},
-        {0xE2299990, "nppl.innoverse.club"},
+        {0xE2299990, "api.innoverse.club"},
         {0xE229A600, "https://pls.wup.shop.pretendo.cc/pls/upload"},
         {0xE229A6AC, "https://npvk-dev.app.pretendo.cc/reports"},
         {0xE229A6D8, "https://npvk.app.pretendo.cc/reports"},
@@ -35,7 +35,7 @@ static const URL_Patch url_patches[] = {
         {0xE22B3FFC, "https://nus.c.shop.pretendo.cc/nus/services/NetUpdateSOAP"},
         {0xE229DE0C, "n.app.pretendo.cc"},
         //nim-boss .bss
-        {0xE24B8A24, "https://nppl.innoverse.club/p01/policylist/1/1/UNK"},
+        {0xE24B8A24, "https://api.innoverse.club/p01/policylist/1/1/UNK"}, //WWP
         {0xE31930D4, "https://%s%saccount.pretendo.cc/v%u/api/"}
 
 };
