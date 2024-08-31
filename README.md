@@ -2,9 +2,12 @@
 For install Innoverse on Wii U Menu.
 
 # Build
-- First step, you need to install Docker for compile this project.
-- After, go to cmd on the folder and put this command `docker build . -t innoverse-builder`
-and put this command `docker run -it --rm -v .:/app innoverse-builder`.
+- First, you need to install Docker and devkitpro with WUT for compile this project.
+- After, go to terminal on the folder and do this command `docker build . -t innoverse-builder`
+and then do this command for compile `docker run -it --rm -v .:/app innoverse-builder`.
+
+# Informations
+- If you are using tiramisu, go to download [Innoverse-WWP-Patcher](https://github.com/InnoverseTeam/Innoverse-WWP-Plaza)
 
 # Credits
 - cedkeChat01
