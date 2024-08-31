@@ -212,7 +212,7 @@ DEINITIALIZE_PLUGIN() {
 }
 
 ON_APPLICATION_START() {
-    DEBUG_FUNCTION_LINE_VERBOSE("Innoverse " INNOVERSE_VERSION " starting up...\n");
+    DEBUG_FUNCTION_LINE_VERBOSE("Innoverse-Patcher " INNOVERSE_VERSION " starting up...\n");
 
     setup_olv_libs();
     matchmaking_notify_titleswitch();
@@ -220,5 +220,5 @@ ON_APPLICATION_START() {
 }
 
 ON_APPLICATION_ENDS() {
-    DEBUG_FUNCTION_LINE_VERBOSE("Innoverse " INNOVERSE_VERSION " shuting down...\n");
+    DEBUG_FUNCTION_LINE_VERBOSE("Innoverse-Patcher " INNOVERSE_VERSION " shuting down...\n");
 }
