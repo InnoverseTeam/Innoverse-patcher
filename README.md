@@ -10,4 +10,3 @@ and put this command `docker run -it --rm -v .:/app innoverse-builder`.
 - cedkeChat01
 - AshQuarky
 - MatthewL246
-- CarlosNunezMX (Certificats help).
