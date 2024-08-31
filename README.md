@@ -1,13 +1,22 @@
-# Innoverse-patcher
-For install Innoverse on Wii U Menu.
+# Innoverse-Patcher
+- Patcher of Innoverse for use Innoverse on Wii U.
 
-# Build
-- First, you need to install Docker and devkitpro with WUT for compile this project.
-- After, go to terminal on the folder and do this command `docker build . -t innoverse-builder`
-and then do this command for compile `docker run -it --rm -v .:/app innoverse-builder`.
+### Setup
+- Install [git](https://git-scm.com/downloads), then clone this project.
+```bash
+$ git clone https://github.com/InnoverseTeam/Innoverse-Patcher
+$ cd Innoverse-Patcher
+```
+
+### Compiling using Docker
+- Download docker and devkitpro.
+```bash
+$ docker build . -t innoverse-builder
+$ docker run -it --rm -v .:/app innoverse-builder
+```
 
 # Informations
-- If you are using tiramisu, go to download [Innoverse-WWP-Patcher](https://github.com/InnoverseTeam/Innoverse-WWP-Patcher)
+- If you are using tiramisu, go to download [Innoverse-WWP-Patcher](https://github.com/InnoverseTeam/Innoverse-WWP-Patcher).
 
 # Credits
 - cedkeChat01
