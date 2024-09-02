@@ -36,7 +36,7 @@ static const URL_Patch url_patches[] = {
         {0xE229DE0C, "n.app.pretendo.cc"},
         //nim-boss .bss
         {0xE24B8A24, "https://api.innoverse.club/p01/policylist/1/1/UNK"}, //WWP
-        {0xE31930D4, "https://%s%saccount.pretendo.cc/v%u/api/"}
+        {0xE31930D4, "https://%s%saccount.innoverse.club/v%u/api/"}
 
 };
 
