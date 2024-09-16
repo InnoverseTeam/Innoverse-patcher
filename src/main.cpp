@@ -2,15 +2,20 @@
     Copyright 2022 Ash Logan <ash@heyquark.com>
     Copyright 2019 Maschell
 
-    Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby
-    granted, provided that the above copyright notice and this permission notice appear in all copies.
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
 
-    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL
-    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER
-    IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-    PERFORMANCE OF THIS SOFTWARE.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
@@ -32,7 +37,6 @@
 #include "Notification.h"
 #include "patches/olv_urls.h"
 #include "patches/game_matchmaking.h"
-#include "patches/account_settings.h"
 
 #include <coreinit/filesystem.h>
 #include <cstring>
@@ -47,7 +51,11 @@
 
 #define INNOVERSE_VERSION "v1.0.6"
 
-WUPS_PLUGIN_NAME("Innoverse-patcher");
+/**
+    Mandatory plugin information.
+    If not set correctly, the loader will refuse to use the plugin.
+**/
+WUPS_PLUGIN_NAME("Inkay");
 WUPS_PLUGIN_DESCRIPTION("Innoverse Miiverse Custom Patcher");
 WUPS_PLUGIN_VERSION(INNOVERSE_VERSION);
 WUPS_PLUGIN_AUTHOR("InnoverseTeam");
@@ -60,6 +68,7 @@ WUPS_USE_WUT_DEVOPTAB();
 #include <kernel/kernel.h>
 #include <mocha/mocha.h>
 #include <function_patcher/function_patching.h>
+#include "patches/account_settings.h"
 #include "utils/sysconfig.h"
 
 //thanks @Gary#4139 :p
@@ -169,7 +178,7 @@ INITIALIZE_PLUGIN() {
                                 os_version.major, os_version.minor, os_version.patch, os_version.region
     );
 
-    // if using Innoverse then (try to) apply the ssl patches
+    // if using innoverse then (try to) apply the ssl patches
     if (Config::connect_to_network) {
         if (is555(os_version)) {
             Mocha_IOSUKernelWrite32(0xE1019F78, 0xE3A00001); // mov r0, #1
@@ -183,7 +192,7 @@ INITIALIZE_PLUGIN() {
 
         // IOS-NIM-BOSS GlobalPolicyList->state: poking this forces a refresh after we changed the url
         Mocha_IOSUKernelWrite32(0xE24B3D90, 4);
-        
+
         DEBUG_FUNCTION_LINE_VERBOSE("Innoverse URL and NoSSL patches applied successfully.");
 
         ShowNotification(get_innoverse_message());
