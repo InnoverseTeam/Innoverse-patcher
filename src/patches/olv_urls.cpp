@@ -15,6 +15,7 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+
 #include "olv_urls.h"
 #include "config.h"
 #include "utils/logger.h"
@@ -50,7 +51,7 @@ bool path_is_olv(const char* path) {
 
 void new_rpl_loaded(OSDynLoad_Module module, void* ctx, OSDynLoad_NotifyReason reason, OSDynLoad_NotifyData* rpl) {
     if (!Config::connect_to_network) {
-        DEBUG_FUNCTION_LINE("Innoverse-patcher: Miiverse patches skipped.");
+        DEBUG_FUNCTION_LINE_VERBOSE("Inkay: Miiverse patches skipped.");
         return;
     }
 
@@ -63,7 +64,7 @@ void new_rpl_loaded(OSDynLoad_Module module, void* ctx, OSDynLoad_NotifyReason r
 
 bool setup_olv_libs() {
     if (!Config::connect_to_network) {
-        DEBUG_FUNCTION_LINE("Innoverse-patcher: Miiverse patches skipped.");
+        DEBUG_FUNCTION_LINE_VERBOSE("Inkay: Miiverse patches skipped.");
         return false;
     }
 
@@ -71,14 +72,14 @@ bool setup_olv_libs() {
 
     auto olvLoaded = check_olv_libs();
     if (!olvLoaded) {
-        DEBUG_FUNCTION_LINE("Innoverse-patcher: no olv, quitting for now\n");
+        DEBUG_FUNCTION_LINE_VERBOSE("Inkay: no olv, quitting for now\n");
         return false;
     }
 
     //wish there was a better way than "blow through MEM2"
     uint32_t base_addr, size;
     if (OSGetMemBound(OS_MEM2, &base_addr, &size)) {
-        DEBUG_FUNCTION_LINE("Innoverse-patcher: OSGetMemBound failed!");
+        DEBUG_FUNCTION_LINE("Inkay: OSGetMemBound failed!");
         return false;
     }
 
