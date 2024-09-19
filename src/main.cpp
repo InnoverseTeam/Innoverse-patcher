@@ -55,8 +55,8 @@
     Mandatory plugin information.
     If not set correctly, the loader will refuse to use the plugin.
 **/
-WUPS_PLUGIN_NAME("Inkay");
-WUPS_PLUGIN_DESCRIPTION("Innoverse Miiverse Custom Patcher");
+WUPS_PLUGIN_NAME("Innoverse-Patcher");
+WUPS_PLUGIN_DESCRIPTION("Innoverse Miiverse Replacement Patcher");
 WUPS_PLUGIN_VERSION(INNOVERSE_VERSION);
 WUPS_PLUGIN_AUTHOR("InnoverseTeam");
 WUPS_PLUGIN_LICENSE("GPLv3");
