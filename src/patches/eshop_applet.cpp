@@ -30,7 +30,7 @@
 #include "ca_pem.h" // generated at buildtime
 
 const char wave_original[] = "https://ninja.wup.shop.nintendo.net/ninja/wood_index.html?";
-const char wave_new[] =      "https://geteshop.innoverse.club/ninja/wood_index.html?";
+const char wave_new[] =      "https://samurai.innoverse.club/ninja/wood_index.html?";
 
 const char whitelist_original[] = {
         0x68, 0x74, 0x74, 0x70, 0x73, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -53,24 +53,24 @@ DECL_FUNCTION(int, FSOpenFile_eShop, FSClient *client, FSCmdBlock *block, char *
     const char *initialOma = "vol/content/initial.oma";
 
     if (!Config::connect_to_network) {
-        DEBUG_FUNCTION_LINE("Innoverse-patcher: eShop patches skipped.");
+        DEBUG_FUNCTION_LINE("Innoverse-Patcher: eShop patches skipped.");
         return real_FSOpenFile_eShop(client, block, path, mode, handle, error);
     }
 
     if (strcmp(initialOma, path) == 0) {
-        DEBUG_FUNCTION_LINE("Innoverse-patcher: hewwo eShop!\n");
+        DEBUG_FUNCTION_LINE("Innoverse-Patcher: hello eShop!\n");
 
         if (!replace(0x10000000, 0x10000000, wave_original, sizeof(wave_original), wave_new, sizeof(wave_new)))
             DEBUG_FUNCTION_LINE("Innoverse-patcher: We didn't find the url /)>~<(\\");
 
         if (!replace(0x10000000, 0x10000000, whitelist_original, sizeof(whitelist_original), whitelist_new, sizeof(whitelist_new)))
-            DEBUG_FUNCTION_LINE("Innoverse-patcher: We didn't find the whitelist /)>~<(\\");
+            DEBUG_FUNCTION_LINE("Innoverse-Patcher: We didn't find the whitelist /)>~<(\\");
 
     // Check for root CA file and take note of its handle
     } else if (strcmp("vol/content/browser/rootca.pem", path) == 0) {
         int ret = real_FSOpenFile_eShop(client, block, path, mode, handle, error);
         rootca_pem_handle = *handle;
-        DEBUG_FUNCTION_LINE("Innoverse-patcher: Found eShop CA, replacing...");
+        DEBUG_FUNCTION_LINE("Innoverse-Patcher: Found eShop CA, replacing...");
         return ret;
     }
 
