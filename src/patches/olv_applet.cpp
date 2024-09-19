@@ -79,7 +79,7 @@ DECL_FUNCTION(int, FSOpenFile, FSClient *client, FSCmdBlock *block, char *path, 
         //we do it when loading this file since it should only load once, preventing massive lag spikes as it searches all of MEM2 xD
         //WHBLogUdpInit();
 
-        DEBUG_FUNCTION_LINE("Innoverse-patcher: hellooooo!\n");
+        DEBUG_FUNCTION_LINE("Innoverse-Patcher: hellooooo!\n");
 
         auto olv_ok = setup_olv_libs();
         // Patch applet binary too
@@ -89,7 +89,7 @@ DECL_FUNCTION(int, FSOpenFile, FSClient *client, FSCmdBlock *block, char *path, 
     } else if (strcmp("vol/content/browser/rootca.pem", path) == 0) {
         int ret = real_FSOpenFile(client, block, path, mode, handle, error);
         rootca_pem_handle = *handle;
-        DEBUG_FUNCTION_LINE("Innoverse-patcher: Found Miiverse CA, replacing...");
+        DEBUG_FUNCTION_LINE("Innoverse-Patcher: Found Miiverse CA, replacing...");
         return ret;
     }
 
@@ -99,7 +99,7 @@ DECL_FUNCTION(int, FSOpenFile, FSClient *client, FSCmdBlock *block, char *path, 
 DECL_FUNCTION(FSStatus, FSReadFile, FSClient *client, FSCmdBlock *block, uint8_t *buffer, uint32_t size, uint32_t count,
               FSFileHandle handle, uint32_t unk1, uint32_t flags) {
     if (size != 1) {
-        DEBUG_FUNCTION_LINE("Innoverse-patcher: Miiverse CA replacement failed!");
+        DEBUG_FUNCTION_LINE("Innoverse-Patcher: Miiverse CA replacement failed!");
     }
 
     if (rootca_pem_handle && *rootca_pem_handle == handle) {
