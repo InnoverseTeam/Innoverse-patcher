@@ -1,7 +1,0 @@
-.vscode/
-.idea/
-/build
-*.elf
-*.wps
-certs/
-*.lst
