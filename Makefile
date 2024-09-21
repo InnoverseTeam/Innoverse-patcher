@@ -28,7 +28,7 @@ export OBJCOPY	:=	$(PREFIX)objcopy
 # SOURCES is a list of directories containing source code
 # INCLUDES is a list of directories containing extra header files
 #---------------------------------------------------------------------------------
-TARGET		:=	wiiuhacking
+TARGET		:=	Innoverse-Patcher
 BUILD		:=	build
 BUILD_DBG	:=	$(TARGET)_debug
 SOURCES		:=	src \
