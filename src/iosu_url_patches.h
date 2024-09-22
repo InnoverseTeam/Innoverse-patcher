@@ -18,7 +18,7 @@ static const URL_Patch url_patches[] = {
         {0xE2282DB4, "https://ecs.wup.shop.innoverse.club/ecs/services/ECommerceSOAP"},
         {0xE22830A0, "https://ecs.wup.shop.innoverse.club/ecs/services/ECommerceSOAP"},
         {0xE22830E0, "https://nus.wup.shop.innoverse.club/nus/services/NetUpdateSOAP"},
-        {0xE2299990, "nppl.app.innoverse.club"},
+        {0xE2299990, "nppl.innoverse.club"},
         {0xE229A600, "https://pls.wup.shop.innoverse.club/pls/upload"},
         {0xE229A6AC, "https://npvk-dev.app.innoverse.club/reports"},
         {0xE229A6D8, "https://npvk.app.innoverse.club/reports"},
