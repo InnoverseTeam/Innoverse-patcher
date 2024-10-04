@@ -49,7 +49,7 @@
 
 #include <gx2/surface.h>
 
-#define INNOVERSE_VERSION "v1.0.6"
+#define INNOVERSE_VERSION "v1.0.7"
 
 /**
     Mandatory plugin information.
@@ -103,7 +103,9 @@ static const char *get_nintendo_network_message() {
         default:
             return "Using Miiverse";
         case nn::swkbd::LanguageType::Spanish:
+            return "Usando Miiverse";
         case nn::swkbd::LanguageType::Portuguese:
+            return "Usando Miiverse";
         case nn::swkbd::LanguageType::Italian:
             return "Usando Miiverse";
         case nn::swkbd::LanguageType::French:
@@ -111,6 +113,7 @@ static const char *get_nintendo_network_message() {
         case nn::swkbd::LanguageType::German:
             return "Nutze Miiverse";
         case nn::swkbd::LanguageType::SimplifiedChinese:
+            return "使用 Miiverse";
         case nn::swkbd::LanguageType::TraditionalChinese:
             return "使用 Miiverse";
         case nn::swkbd::LanguageType::Japanese:
@@ -128,7 +131,9 @@ static const char *get_innoverse_message() {
         default:
             return "Using Innoverse";
         case nn::swkbd::LanguageType::Spanish:
+            return "Usando Innoverse";
         case nn::swkbd::LanguageType::Portuguese:
+            return "Usando Innoverse";
         case nn::swkbd::LanguageType::Italian:
             return "Usando Innoverse";
         case nn::swkbd::LanguageType::French:
@@ -136,6 +141,7 @@ static const char *get_innoverse_message() {
         case nn::swkbd::LanguageType::German:
             return "Nutze Innoverse";
         case nn::swkbd::LanguageType::SimplifiedChinese:
+            return "使用 Innoverse";
         case nn::swkbd::LanguageType::TraditionalChinese:
             return "使用 Innoverse";
         case nn::swkbd::LanguageType::Japanese:
