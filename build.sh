@@ -1,6 +1,5 @@
 #!/bin/bash
 
-IMAGE_NAME="innoverse-patcher"
 DOCKERFILE="Dockerfile"
 
 if ! command -v docker &> /dev/null; then
@@ -8,8 +7,8 @@ if ! command -v docker &> /dev/null; then
     exit 1
 fi
 
-echo "Building Docker image: $IMAGE_NAME..."
-docker build . -t "$IMAGE_NAME"
+echo "Building Docker image: innoverse-patcher.."
+docker build . -t innoverse-patcher
 
 if [ $? -ne 0 ]; then
     echo "Failed to build Docker image."
@@ -17,7 +16,7 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "Compiling inside the Docker container..."
-docker run -it --rm -v .:/app -w /app "$IMAGE_NAME"
+docker run -it --rm -v .:/app innoverse-patcher
 
 if [ $? -eq 0 ]; then
     echo "Compilation successful!"
