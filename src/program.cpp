@@ -54,14 +54,16 @@ MochaUtilsStatus Mocha_IOSUKernelRead32(uint32_t address, uint32_t *out_buffer) 
     void *tmp_buf = NULL;
     int32_t count = 1;
 
+    int res;
+
     if (((uintptr_t) out_buffer & 0x3F) || ((count * 4) & 0x3F)) {
         tmp_buf = (uint32_t *) memalign(0x40, ROUNDUP((count * 4), 0x40));
         if (!tmp_buf) {
             return MOCHA_RESULT_OUT_OF_MEMORY;
         }
     }
-
-    int res = IOS_Ioctl(iosuhaxHandle, IOCTL_KERN_READ32, io_buf, sizeof(address), tmp_buf ? tmp_buf : out_buffer, count * 4);
+    
+    res = IOS_Ioctl(iosuhaxHandle, IOCTL_KERN_READ32, io_buf, sizeof(address), tmp_buf ? tmp_buf : out_buffer, count * 4);
 
     if (res >= 0 && tmp_buf) {
         memcpy(out_buffer, tmp_buf, count * 4);
@@ -94,11 +96,11 @@ static void write_string(uint32_t addr, const char *str) {
 
 int MainThread(int argc, void* argv) {
     uint64_t title_id = OSGetTitleID();
-    if (title_id != 0x000500101004A100 &&  // USA
-        title_id != 0x000500101004A000 &&  // EUR
-        title_id != 0x0005001010040000)    // JPN
+    if (title_id != 0x000500101004A100 &&  // USA ID
+        title_id != 0x000500101004A000 &&  // EUR ID
+        title_id != 0x0005001010040000)    // JPN ID
     {
-        log_printf("error for starting program.");
+        log_printf("Error for start patcher with ustom URLs.");
         return 0;    
     } 
 
