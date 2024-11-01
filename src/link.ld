@@ -1,4 +1,4 @@
-OUTPUT(Innoverse-patcher.elf);
+OUTPUT(Innoverse-Patcher.elf);
 
 ENTRY(__entry);
 
