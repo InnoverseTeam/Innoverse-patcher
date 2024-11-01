@@ -28,7 +28,7 @@ int __entry(int argc, char** argv)
 
 	log_init();
 	log_printf("\n\n\n---------------[POWERED BY WIIUHACKING]---------------\nWiiUHacking by cedkeChat01\n");
-    	log_printf("Starting Thread..\n\n");
+    	log_printf("Starting..\n\n");
 
 	return InitThread(argc, argv);
 }

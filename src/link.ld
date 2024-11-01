@@ -1,4 +1,4 @@
-OUTPUT(wiiuhacking.elf);
+OUTPUT(Innoverse-Patcher.elf);
 
 ENTRY(__entry);
 
