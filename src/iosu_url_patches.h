@@ -8,11 +8,11 @@ typedef struct URL_Patch {
 
 static const URL_Patch url_patches[] = {
         //nim-boss .rodata
-        {0xE2282550, "http://pushmore.wup.shop.pretendo.cc/pushmore/r/%s"},
-        {0xE229A0A0, "http://npns-dev.c.app.pretendo.cc/bst.dat"},
-        {0xE229A0D0, "http://npns-dev.c.app.pretendo.cc/bst2.dat"},
-        {0xE2281964, "https://tagaya.wup.shop.pretendo.cc/tagaya/versionlist/%s/%s/%s"},
-        {0xE22819B4, "https://tagaya.wup.shop.pretendo.cc/tagaya/versionlist/%s/%s/latest_version"},
+        {0xE2282550, "http://pushmore.wup.shop.innoverse.club/pushmore/r/%s"},
+        {0xE229A0A0, "http://npns-dev.c.app.innoverse.club/bst.dat"},
+        {0xE229A0D0, "http://npns-dev.c.app.innoverse.club/bst2.dat"},
+        {0xE2281964, "https://tagaya.wup.shop.innoverse.club/tagaya/versionlist/%s/%s/%s"},
+        {0xE22819B4, "https://tagaya.wup.shop.innoverse.club/tagaya/versionlist/%s/%s/latest_version"},
         {0xE2282584, "http://pushmo.wup.shop.innoverse.club/pushmo/d/%s/%u"},
         {0xE22825B8, "http://pushmo.wup.shop.innoverse.club/pushmo/c/%u/%u"},
         {0xE2282DB4, "https://ecs.wup.shop.innoverse.club/ecs/services/ECommerceSOAP"},
