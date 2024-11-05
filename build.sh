@@ -3,7 +3,7 @@
 DOCKERFILE="Dockerfile"
 
 if ! command -v docker &> /dev/null; then
-    echo "Docker is not installed. Please install Docker and try again."
+    echo "Docker is not installed. Please install Docker and try again." # Need to download Docker or open Docker.
     exit 1
 fi
 
