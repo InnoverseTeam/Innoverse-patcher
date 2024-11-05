@@ -72,7 +72,7 @@ constexpr config_strings get_config_strings(nn::swkbd::LanguageType language) {
                 .network_category = "Sélection du réseau",
                 .connect_to_network_setting = "Connexion à Innoverse",
                 .other_category = "Autres paramètres",
-                .reset_wwp_setting = "Réinitialiser la place WaraWara",
+                .reset_wwp_setting = "Réinitialiser la place Wara Wara Plaza",
                 .press_a_action = "Appuyez sur A",
                 .restart_to_apply_action = "Redémarrer pour appliquer",
                 .need_menu_action = "Depuis le menu Wii U seulement",
@@ -327,7 +327,7 @@ void Config::Init() {
     WUPSConfigAPIStatus cres;
 
     // Init the config api
-    WUPSConfigAPIOptionsV1 configOptions = { .name = "Innoverse-Patcher" };
+    WUPSConfigAPIOptionsV1 configOptions = { .name = "Innoverse-patcher" };
     cres = WUPSConfigAPI_Init(configOptions, ConfigMenuOpenedCallback, ConfigMenuClosedCallback);
     if (cres != WUPSCONFIG_API_RESULT_SUCCESS) return (void)report_error(cres);
 
