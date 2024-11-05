@@ -1,9 +1,10 @@
+# -- Credits Ash --
 name: Innoverse-patcher-CI
 
 on: push
 
 jobs:
-    build-inkay:
+    build-innoverse-patcher:
         runs-on: ubuntu-22.04
         steps:
             - uses: actions/checkout@v2
