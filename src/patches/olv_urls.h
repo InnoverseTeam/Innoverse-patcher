@@ -20,6 +20,6 @@ const char original_url[] = "discovery.olv.nintendo.net/v1/endpoint";
 const char new_url[] =      "discovery.olv.innoverse.club/v1/endpoint";
 
 _Static_assert(sizeof(new_url) <= 44,
-               "new_url must be less than or equal to 44 chars including null terminator.");
+               "new_url must be less than or equal to 44 chars including null terminator."); // Changed to 44 chars.
 
 bool setup_olv_libs();
