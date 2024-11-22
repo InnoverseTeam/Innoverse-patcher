@@ -37,6 +37,8 @@
 #include "Notification.h"
 #include "patches/olv_urls.h"
 #include "patches/game_matchmaking.h"
+#include "patches/game_peertopeer.h"
+#include "patches/account_settings.h"
 
 #include <coreinit/filesystem.h>
 #include <cstring>
@@ -230,6 +232,7 @@ ON_APPLICATION_START() {
     DEBUG_FUNCTION_LINE_VERBOSE("Innoverse-Patcher " INNOVERSE_VERSION " starting up...\n");
 
     setup_olv_libs();
+    peertopeer_patch();
     matchmaking_notify_titleswitch();
     patchAccountSettings();
 }
