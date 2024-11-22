@@ -17,7 +17,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #include "sysconfig.h"
-#include "utils/logger.h"
+#include "logger.h"
 
 #include <coreinit/userconfig.h>
 #include <optional>
