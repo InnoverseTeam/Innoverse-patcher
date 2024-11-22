@@ -16,7 +16,7 @@
 #include "game_peertopeer.h"
 
 #include "../config.h"
-#include "../sysconfig.h"
+#include "../utils/sysconfig.h"
 #include "../utils/logger.h"
 #include "../utils/rpl_info.h"
 #include "../utils/replace_mem.h"
