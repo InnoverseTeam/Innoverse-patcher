@@ -51,7 +51,7 @@ bool path_is_olv(const char* path) {
 
 void new_rpl_loaded(OSDynLoad_Module module, void* ctx, OSDynLoad_NotifyReason reason, OSDynLoad_NotifyData* rpl) {
     if (!Config::connect_to_network) {
-        DEBUG_FUNCTION_LINE_VERBOSE("Inkay: Miiverse patches skipped.");
+        DEBUG_FUNCTION_LINE_VERBOSE("Innoverse-patcher: Miiverse patches skipped.");
         return;
     }
 
