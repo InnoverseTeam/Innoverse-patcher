@@ -15,10 +15,10 @@ $ docker build . -t innoverse-builder
 $ docker run -it --rm -v .:/app innoverse-builder
 ```
 
-# Informations
+### Informations
 - If you are using tiramisu, go to download [Innoverse-WWP-Patcher](https://github.com/InnoverseTeam/Innoverse-WWP-Patcher).
 
-# Credits
+### Credits
 - cedkeChat01
 - AshQuarky
 - MatthewL246
