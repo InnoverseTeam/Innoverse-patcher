@@ -1,4 +1,5 @@
 # Innoverse-Patcher
+- A fork of Pretendo Inkay.
 - Patcher of Innoverse for use Innoverse on Wii U.
 
 ### Setup
