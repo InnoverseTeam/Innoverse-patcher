@@ -1,4 +1,5 @@
 # Innoverse-Patcher
+## ⚠️ It is recommended to use the new [Link3DS patcher](https://github.com/Link-3DS/Nebula) to use our Miiverse services. ⚠️
 - A fork of Pretendo Network Inkay, thanks them <3.
 - Patcher of Innoverse for use Innoverse on Wii U.
 
